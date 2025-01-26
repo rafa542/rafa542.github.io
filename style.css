@@ -51,7 +51,6 @@ section {
   margin-bottom: 2rem;
 }
 
-/* About Me Section */
 .about-container {
   display: flex; /* Enables a horizontal layout for text and image */
   align-items: center; /* Aligns text and image vertically in the center */
