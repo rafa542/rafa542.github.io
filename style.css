@@ -16,31 +16,38 @@ header {
   text-align: center;
 }
 
-header h1 {
+/* header h1 {
   margin: 0;
   font-size: 2.5rem;
-}
+} */
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0 0;
-}
-
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
+.navbar {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    transform: translateX(30%);
+  }
+  
+  .nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffd4;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #ffffffd4;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #2a42c9;
+    color: #fff;
+    text-decoration: none;
+  }
 
 /* Main Content */
 main {
@@ -52,20 +59,22 @@ section {
 }
 
 .about-container {
-  display: flex; /* Enables a horizontal layout for text and image */
-  align-items: center; /* Aligns text and image vertically in the center */
-  gap: 20px; /* Adds space between the text and image */
-}
-
-.about-container p {
-  flex: 1; /* Makes the text take up available space */
+  display: flex; /* Enables a horizontal layout for the text and image */
+  align-items: center; /* Aligns the image and text vertically in the center */
+  gap: 20px; /* Adds space between the text and the image */
 }
 
 .profile-photo {
-  width: 150px; /* Sets the image width */
+  flex-shrink: 0; /* Ensures the image doesn't shrink when space is limited */
+  width: 200px; /* Sets the image width */
   height: auto; /* Maintains the aspect ratio */
-  border-radius: 50%; /* Makes the image circular */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+  border-radius: 30%; /* Rounds off the edges. 50% is a circle image. */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+}
+
+.about-container p {
+  flex: 1; /* Ensures the text takes up the remaining space */
+  margin: 0; /* Removes default margins */
 }
 
 h2 {
