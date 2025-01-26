@@ -51,8 +51,22 @@ section {
   margin-bottom: 2rem;
 }
 
-#contact {
-  color: green;
+/* About Me Section */
+.about-container {
+  display: flex; /* Enables a horizontal layout for text and image */
+  align-items: center; /* Aligns text and image vertically in the center */
+  gap: 20px; /* Adds space between the text and image */
+}
+
+.about-container p {
+  flex: 1; /* Makes the text take up available space */
+}
+
+.profile-photo {
+  width: 150px; /* Sets the image width */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 50%; /* Makes the image circular */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
 }
 
 h2 {
