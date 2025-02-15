@@ -18,6 +18,13 @@ header {
 
 /* Navigation bar */
 
+.logo img {
+  height: 50px; /* Adjust size as needed */
+  width: auto;
+  display: block;
+  margin-right: 60px; /* Space between logo and first nav button */
+}
+
 .navbar {
     display: flex;
     justify-content: left;
@@ -25,7 +32,7 @@ header {
     margin: 0;
     padding: 0;
     align-items: center;
-    transform: translateX(30%);
+    transform: None;
   }
   
   .nav-button {

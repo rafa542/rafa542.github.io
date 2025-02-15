@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rafael Arbex-Murut</title>
+  <link rel="stylesheet" href="../style.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <style>
+    #timeline {
+      font-size: 20px;
+      font-weight: 300;
+      position: relative;
+      width: 100%;
+      margin: 40px auto;
+      max-width: 1200px;
+      padding-left: 40px;
+    }
+
+    .timelineitem {
+      width: 50%;
+      position: relative;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .timelineitem:nth-child(odd) {
+      margin-left: 50%;
+      padding-left: 40px;
+      border-left: 5px solid #333;
+      text-align: left;
+    }
+
+    .timelineitem:nth-child(even) {
+      margin-right: 50%;
+      padding-right: 40px;
+      border-right: 5px solid #333;
+      text-align: right;
+      transform: translateX(1.01%);
+    }
+
+    .timelineitem::before {
+      width: 11px;
+      height: 11px;
+      background: #333;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 40px; 
+      border-radius: 50%;
+    }
+
+    .timelineitem:nth-child(odd)::before {
+      left: -8px;
+    }
+
+    .timelineitem:nth-child(even)::before {
+      right: -8px;
+    }
+
+    .tdate {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #6682B6;
+    }
+
+    .ttitle {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .tdesc {
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 5px;
+    }
+
+    .thigh {
+      font-weight: 550;
+      font-size: 16px;
+      color: #5C706B;
+    }
+
+    .timeline-gm {
+      position: absolute;
+      width: auto;
+      height: 150px;
+      transform: translateY(-15%);
+      right: 110%;
+      margin-right: 20px;
+    }
+
+    .timeline-gm-track {
+      position: absolute;
+      width: auto;
+      height: 130px;
+      transform: translateX(30%);
+      left: 80%;
+      /* margin-top: -3.5%; */
+      margin-top: 0%;
+    }
+
+    .timeline-gm-excel {
+      position: absolute;
+      width: auto;
+      height: 130px;
+      transform: translateX(-20%);
+      margin-top: 0%;
+      right: 90%;
+      margin-left: 20px;
+    }
+
+    .timeline-whip {
+      position: absolute;
+      width: auto;
+      height: 230px;
+      transform: translateX(30%);
+      margin-top: -7%;
+    }
+
+    .timeline-galileo {
+      position: absolute;
+      width: 425px;
+      height: 150px;
+      transform: translateX(-115%);
+      margin-top: -6%;
+    }
+
+    .timeline-tesla-robotics {
+      position: absolute;
+      width: auto;
+      height: 180px;
+      transform: translateX(50%);
+      margin-top: -6%;
+    }
+
+    @media (max-width: 768px) {
+      .timelineitem {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-left: 5px solid #333 !important;
+        border-right: none !important;
+        padding: 20px 40px !important;
+        text-align: left !important;
+        transform: none !important;
+      }
+
+      .timelineitem:nth-child(even)::before,
+      .timelineitem:nth-child(odd)::before {
+        left: -8px !important;
+        right: auto !important;
+      }
+
+      .timeline-gm,
+      .timeline-gm-track,
+      .timeline-gm-excel,
+      .timeline-whip,
+      .timeline-galileo,
+      .timeline-tesla-robotics {
+        position: static !important;
+        width: 80% !important; 
+        max-width: 300px;       
+        height: auto !important;
+        transform: none !important;
+        margin: 10px 0 !important;
+      }
+    }
+
+    .footer {
+      margin-top: 40px; 
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" aria-label="Home" class="logo">
+                <img src="../images/home_icon2.png" alt="Home Logo">
+            </a>
+            <a href="../index.html#about" aria-label="About Me" class="nav-button">About Me</a> 
+            <a href="../index.html#projects" aria-label="Projects" class="nav-button">Projects</a>
+            <a href="./experience.html" aria-label="Experience" class="nav-button">Experience</a>
+            <a href="https://rafa542.github.io/documents/Resume_RAM.pdf" target="_blank" aria-label="Resume" class="nav-button">Resume</a>
+            <a href="../index.html#contact" aria-label="Contact" class="nav-button">Contact</a>
+          </nav>
+      </header>
+  <main>
+    <section class="content-section" style="margin-top: 20px;">
+      <div class="container">
+        <div id="timeline">
+          <div class="timelineitem">
+            <img src="../images/gm.jpg" alt="General Motors" class="timeline-gm">
+            <div class="tdate">June 2023 - Present</div>
+            <div class="ttitle">
+              Software Engineer Data Analyst @
+              <a href="https://www.gm.com/" target="_blank" style="color: #005DAA; font-weight: bold;">
+                General Motors
+              </a>
+            </div>
+            <div class="tdesc">
+              Detroit, MI
+            </div>
+          </div>
+          <div class="timelineitem">
+            <img src="../images/gm-track.png" alt="General Motors TRACK" class="timeline-gm-track">
+            <div class="tdate">June 2021 - May 2023</div>
+            <div class="ttitle">
+              General Motors Technical Rotation and Carer Knowledge (TRACK) @
+              <a href="https://search-careers.gm.com/en/early-careers/" target="_blank" style="color: #000266; font-weight: bold;">
+                General Motors
+              </a>
+            </div>
+            <div class="tdesc">
+                Global Product Development (GPD) TRACK
+            </div>
+            <div class="tdesc">
+                Warren, Pontiac, Milford, MI
+            </div>
+          </div>
+          <div class="timelineitem">
+            <img src="../images/gm-excel.png" alt="General Motors EXCEL" class="timeline-gm-excel">
+            <div class="tdate">June 2020 - August 2020</div>
+            <div class="ttitle">
+              General Motors Exploring Career through Experiential Learning (EXCEL) @
+              <a href="https://www.gm.com/" target="_blank" style="color: #000266; font-weight: bold;">
+                General Motors
+              </a>
+            </div>
+            <div class="tdesc">
+                Summer Intern
+            </div>
+            <div class="tdesc">
+                Warren, MI
+            </div>
+          </div>
+          <div class="timelineitem">
+            <img src="../images/whip-2.png" alt="White House Internship Program" class="timeline-whip">
+            <div class="tdate">January 2020 - April 2020</div>
+            <div class="ttitle">
+              Intern at the Office of Presidential Correspondence (OPC) @
+              <a href="https://trumpwhitehouse.archives.gov/get-involved/internships/" target="_blank" style="color: #000266; font-weight: bold;">
+                White House Internship Program
+              </a>
+            </div>
+            <div class="tdesc">
+                Spring 2020 Cohort
+            </div>
+            <div class="tdesc">
+                Washington, D.C.
+            </div>
+          </div>
+          <div class="timelineitem">
+            <img src="../images/galileo.png" alt="White House Internship Program" class="timeline-galileo">
+            <div class="tdate">August 2018 - May 2019</div>
+            <div class="ttitle">
+              CEED Mentor @
+              <a href="https://eng.vt.edu/ceed/ceed-undergraduate-programs/livinglearningcommunities/communities/hypatia-galileo-mentoring.html" target="_blank" style="color: #000266; font-weight: bold;">
+                Galileo Living Learning Community
+              </a>
+            </div>
+            <div class="tdesc">
+                <a href="https://eng.vt.edu/ceed.html" target="_blank">
+                    Center for the Enhancement of Engineering Diversity
+                </a>
+            </div>
+            <div class="tdesc">
+                Blacksburg, VA
+            </div>
+          </div>
+          <div class="timelineitem">
+            <img src="../images/tesla-robotic.png" alt="White House Internship Program" class="timeline-tesla-robotics">
+            <div class="tdate">August 2018 - May 2019</div>
+            <div class="ttitle">
+              Assistant Instructor @
+              <a href="https://teslarobotica.com.br/" target="_blank" style="color: #000266; font-weight: bold;">
+                Tesla Robótica Educacional
+              </a>
+            </div>
+            <div class="tdesc">
+                São José dos Campos, SP, Brazil
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 Rafael. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
