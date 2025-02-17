@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,45 +9,245 @@
 
   <!-- Noindex Meta Tag (Prevents Search Engine Indexing) -->
   <!-- <meta name="robots" content="noindex, nofollow"> -->
+  <!-- CSS content for this page -->
+  <style>
+    .content-wrapper {
+      width: min(90%, 1000px);
+      margin: 0 auto;
+      padding-bottom: 3rem;
+    }
 
-  <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="images/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    #skills {
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    #skills p {
+      line-height: 1.6;
+    }
+
+    .view-more {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .view-more a {
+      color: #3f3f46;
+      text-decoration: none;
+      font-weight: 1000;
+    }
+
+    .view-more a:hover {
+      text-decoration: underline;
+      color: #bc9b6a;
+    }
+
+    .view-more a::before {
+      content: "\f09b";
+      font-family: "FontAwesome";
+      margin-right: 0.25rem;
+    }
+
+    #projects h1 {
+      margin-bottom: 1.2rem;
+    }
+
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      padding: 0;
+    }
+
+    .project-image {
+      max-width: 400px;
+      width: 100%;
+      margin-right: 2rem;
+      border: none;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    .project-details {
+      flex: 1;
+      min-width: 220px;
+      padding: 0;
+      border: none;
+    }
+
+    .project-details h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-details p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .project-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .project-buttons a.btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: #fff;
+      background-color: #3f3f46;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .project-buttons a.btn:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .project {
+        flex-direction: column;
+      }
+
+      .project-image {
+        margin: 0 0 1rem 0;
+        max-width: 100%;
+      }
+    }
+  </style>
   <!-- SEO Enhancements -->
-  <meta name="description" content="Portfolio website for Rafael Arbex-Murut, a developer and writer. Explore projects, learn about Rafael, and get in touch.">
+  <meta name="description"
+    content="Portfolio website for Rafael Arbex-Murut, a developer and writer. Explore projects, learn about Rafael, and get in touch.">
   <meta name="author" content="Rafael Arbex-Murut">
 </head>
+
 <body>
   <header>
     <nav class="navbar">
-      <!-- Soon, the href becomes: ./pages/projects.html -->
-      <a href="#about" aria-label="About Me" class="nav-button">About Me</a> 
-      <a href="#projects" aria-label="Projects" class="nav-button">Projects</a>
-      <a href="#articles" aria-label="Articles" class="nav-button">Articles</a>
-      <a href="https://rafa542.github.io/documents/Resume.pdf" target="_blank" aria-label="Resume" class="nav-button">Resume</a>
-      <a href="#contact" aria-label="Contact" class="nav-button">Contact</a>
+      <a href="../index.html" aria-label="Home" class="logo">
+          <img src="../images/home_icon2.png" alt="Home Logo">
+      </a>
+      <a href="../index.html#about" aria-label="About Me" class="nav-button">About Me</a> 
+      <a href="../pages/projects.html" aria-label="Projects" class="nav-button">Projects</a>
+      <a href="./experience.html" aria-label="Experience" class="nav-button">Experience</a>
+      <a href="https://rafa542.github.io/documents/Resume_RAM.pdf" target="_blank" aria-label="Resume" class="nav-button">Resume</a>
+      <a href="../index.html#contact" aria-label="Contact" class="nav-button">Contact</a>
     </nav>
   </header>
 
   <main>
+    <div class="content-wrapper">
+      <section id="skills">
+        <p>
+          <strong>Programming Languages:</strong> Python, SQL, R, Java, C <br />
+          <strong>Machine Learning & AI:</strong> Supervised & Unsupervised ML, LLM’s, Neural Networks, Keras, Tensorflow, 
+          PyTorch, HuggingFace, Productionizing Models, MLflow, Kubeflow<br />
+          <strong>Data Visualization & BI:</strong> Power BI, Jupyter Notebook, Pandas, NumPy, Matplotlib, ggplot2, Excel<br />
+          <strong>Cloud & Data Engineering:</strong> AWS, GCP, Azure Databricks, Spark, PySpark, Hadoop, ETL, Data Warehousing, Data Pipelines <br />
+          <strong>Business Development & Workflow:</strong> Git/Github, Agile, Scrum, Jira, Storytelling, Visualization, CI/CD <br />
+          <strong>Statistics & Modeling:</strong> Linear Regression, Bayesian Statistics, Predictive Modeling, Naïve Bayes, K-means, 
+          Decision Trees, A/B Testing <br />
+          <strong>Languages:</strong> Portuguese (Bilingual Proficiency), Spanish (Full Professional Proficiency)<br />
+        </p>
+        <p class="view-more">
+          Visit my <a href="https://github.com/rafa542" target="_blank" rel="noopener noreferrer">Github</a>.
+        </p>
+      </section>
+      <section id="projects">
+        <div class="project">
+          <img src="../images/bias-beacon.jpg" alt="Project 1 Thumbnail" class="project-image" />
+          <div class="project-details">
+            <h2><span style="font-weight: bold; color: #007bff;">Bias Beacon</span></h2>
+            <p>
+              A Google Chrome plugin that automatically detects and highlights bias in news articles. 
+              Our capstone team fine-tuned a <span
+                style="font-weight: bold; color: #000000;">BERT</span> model with a publicly 
+                available bias dataset to detect five different types of bias. Deployed with AWS, Docker, 
+                and Replit.
+            </p>
+            <div class="project-buttons">
+              <a href="https://github.com/rafa542/bias-beacon" class="btn" target="_blank">View Repo</a>
+              <!-- Change later so that the video is embedded -->
+              <a href="https://github.com/rafa542/bias-beacon/tree/main/video%20demo" class="btn" target="_blank">Watch Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <img src="../images/art-ex2.jpg" alt="Project 2 Thumbnail" class="project-image" />
+          <div class="project-details">
+            <h2><span style="font-weight: bold; color: #007bff;">Art Style Analysis</span></h2>
+            <p>
+              Mapped the features of different art styles. Extracted simple fetures: LBP, HSV, RGB, and FFT. 
+              Extracted complex features: VGG16.
+            </p>
+            <p>
+              Built comparative Random Forrest and Logistic Regressoin 
+              classfier models with simple and simple + complex features.
+            </p>
+            <div class="project-buttons">
+              <a href="https://github.com/rafa542/computer-vision-final-project-art-analysis" class="btn" target="_blank">View Repo</a>
+              <a href="https://www.kaggle.com/datasets/sivarazadi/wikiart-art-movementsstyles/data" class="btn" target="_blank">View Dataset  </a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <img src="../images/boxplot-age.jpg" alt="Project 3 Thumbnail" class="project-image" />
+          <div class="project-details">
+            <h2><span style="font-weight: bold; color: #007bff;">Data Analysis of Harmful Car Crashes</span></h2>
+            <p>
+              Undergraduate Project where I used logistic regression, area graphs, boxplots, 
+              and proportion tables to extensively analize NHTSA (National Highway Traffic Safety Administration) data.
+            </p>
+            <p>
+              The dataset captures US data, for 1997-2002, from police-reported car crashes in which there is a 
+              harmful event (people or property), and from which at least one vehicle was towed. 
+              Data are restricted to front-seat occupants.
+            </p>
+            <div class="project-buttons">
+              <a href="https://github.com/rafa542/driving-safety-analysis" class="btn" target="_blank">View Repo</a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <img src="../images/eval-algo.png" alt="Project 3 Thumbnail" class="project-image" />
+          <div class="project-details">
+            <h2><span style="font-weight: bold; color: #007bff;">Headline Evaluation and Style Independency of News Outlets</span></h2>
+            <p>
+              Measured how accurate news headlines were to their respective article content. 
+              Employed NLP techniques such as abstractive summarization, Rogue scores, bleu scores, n-grams, etc. to benchmark results 
+              by news outlet. Used similar teechniques to determine style independency of news outlets.
+            </p>
+            <div class="project-buttons">
+              <a href="https://github.com/rafa542/Style-Analysis-in-Journalism"
+                class="btn" target="_blank">View Repo</a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <img src="../images/lets-face-it.jpg" alt="Project 3 Thumbnail" class="project-image" />
+          <div class="project-details">
+            <h2><span style="font-weight: bold; color: #007bff;">Let's Face It!</span></h2>
+            <p>
+              Trained and compared multiple models (FNN, CNN, and VGG16) with different parameters 
+              to classify emotions of facial expressions, reaching a 60% validation accuracy.
+            </p>
+            <div class="project-buttons">
+              <a href="https://github.com/rafa542/w207-letsfaceit"
+                class="btn" target="_blank">View Repo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Rafael. All Rights Reserved.</p>
   </footer>
 </body>
+
 </html>
